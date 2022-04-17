@@ -1,22 +1,25 @@
 import os
 import sys
+import string
 
 template = 'template.cpp'
-list_of_files = ['A.cpp', 'B.cpp', 'C.cpp', 'D.cpp']
+number_files = ['1.cpp', '2.cpp', '3.cpp', '4.cpp', '5.cpp', '6.cpp', '7.cpp', '8.cpp', '9.cpp', '10.cpp']
+upper_case = list(string.ascii_uppercase)
 
-# def writing(file):
-# 	file = open(file, 'w')
-# 	for line in template:
-# 		file.write(line)
-# 	file.close()
+file_name_choose = input('Alphabet(a) or Number(0)')
+number_of_files = int(input("Number of Files : "))
 
-
-# for i in range(len(list_of_files)):
-# 	writing(list_of_files[i])
-
-
-for f in list_of_files:
-	intput_file = open(template, 'r')
-	output_file = open(f, 'w')
-	for line in intput_file:
-		output_file.write(line)
+if file_name_choose == 'a':
+	for i in range(number_of_files):
+		f = f'{upper_case[i]}.cpp'
+		intput_file = open(template, 'r')
+		output_file = open(f, 'w')
+		for line in intput_file:
+			output_file.write(line)
+else:
+	for i in range(number_of_files):
+		f = number_files[i]
+		intput_file = open(template, 'r')
+		output_file = open(f'{i + 1}.cpp', 'w')
+		for line in intput_file:
+			output_file.write(line)
