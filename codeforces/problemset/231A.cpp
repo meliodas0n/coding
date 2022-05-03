@@ -37,19 +37,27 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr
 #define dbg(...)
 #endif
 
-void run_case() {
-    // write your shit code here.
-}
-
 int main() {
     ios::sync_with_stdio(false);
 #ifndef MELIODS_DEBUG
     cin.tie(nullptr);
 #endif
  
-    int tests;
-    cin >> tests;
- 
-    while (tests-- > 0)
-        run_case();
+    int n;
+    cin >> n;
+    int count = 0;
+    int sum = 0;
+    int mat[n][3];
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < 3; j++) {
+            cin >> mat[i][j];
+            sum += mat[i][j];
+        }
+        if (sum == 2) {
+            count++;
+        }
+        sum = 0;
+    }
+    cout << count;
+    return 0;
 }

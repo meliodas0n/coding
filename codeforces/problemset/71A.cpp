@@ -39,6 +39,13 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr
 
 void run_case() {
     // write your shit code here.
+    string s;
+    cin >> s;
+    if (s.size() > 10) {
+        cout << s[0] << s.size() - 2 << s[s.size() - 1] << "\n";
+    } else {
+        cout << s << "\n";
+    }
 }
 
 int main() {
