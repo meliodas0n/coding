@@ -16,6 +16,7 @@ if file_name_choose == 'a':
 		output_file = open(f, 'w')
 		for line in intput_file:
 			output_file.write(line)
+
 else:
 	for i in range(number_of_files):
 		f = number_files[i]
