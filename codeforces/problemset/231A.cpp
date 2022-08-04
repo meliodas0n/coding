@@ -42,22 +42,16 @@ int main() {
 #ifndef MELIODS_DEBUG
     cin.tie(nullptr);
 #endif
- 
-    int n;
-    cin >> n;
-    int count = 0;
-    int sum = 0;
-    int mat[n][3];
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < 3; j++) {
-            cin >> mat[i][j];
-            sum += mat[i][j];
-        }
-        if (sum == 2) {
-            count++;
-        }
-        sum = 0;
+  int n;
+  cin >> n;
+  int count = 0;
+  for (int i = 0; i < n; i++) {
+    int a, b, c;
+    cin >> a >> b >> c;
+    if ((a + b + c) > 1) {
+      count++;
     }
-    cout << count;
-    return 0;
+  }
+  cout << count;
+  return 0;
 }
