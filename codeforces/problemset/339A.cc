@@ -42,17 +42,18 @@ int main() {
 #ifndef MELIODS_DEBUG
     cin.tie(nullptr);
 #endif
-  string a;
-  cin >> a;
-  int mas[105], b;
-  for (int i = 0; i < a.size(); i += 2) {
-    mas[b] = a[i] - 48;
-    b++;
+  string s;
+  cin >> s;
+  vector<int> v;
+  for (int i = 0; i < s.size(); i++) {
+    if (s[i] > 0) {
+      v[i] = s[i];
+    }
   }
-  sort(mas, mas + a.size() / 2 + 1);
-  cout << mas[0];
-  for (int i = 1; i < a.size() / 2 + 1; i++) {
-    cout << "+" << mas[i];
+  sort(v.begin(), v.end());
+  cout << v[0];
+  for (int i = 1; i < v.size(); i++) {
+    cout << "+" << v[i];
   }
   return 0;
 }
