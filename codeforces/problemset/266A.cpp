@@ -46,9 +46,10 @@ int main() {
 #ifndef MELIODS_DEBUG
     cin.tie(nullptr);
 #endif
-
-  string s;
-  cin >> s;
-  
-  return 0;
+ 
+    int tests;
+    cin >> tests;
+ 
+    while (tests-- > 0)
+        run_case();
 }
