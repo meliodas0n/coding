@@ -37,19 +37,29 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr
 #define dbg(...)
 #endif
 
-void run_case() {
-    // write your shit code here.
-}
-
 int main() {
     ios::sync_with_stdio(false);
 #ifndef MELIODS_DEBUG
     cin.tie(nullptr);
 #endif
- 
-    int tests;
-    cin >> tests;
- 
-    while (tests-- > 0)
-        run_case();
+  string s1, s2;
+  cin >> s1 >> s2;
+
+  for (int i = 0; i < s1.size(); i++) {
+    if (s1[i] < 92) {
+      s1[i] += 32;
+    }
+    if (s2[i] < 92) {
+      s2[i] += 32;
+    }
+  }
+
+  if (s1 < s2) {
+    cout << "-1";
+  } else if (s1 == s2) {
+    cout << "0";
+  } else {
+    cout << "1";
+  }
+  return 0;
 }
