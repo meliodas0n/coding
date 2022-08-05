@@ -14,6 +14,7 @@
 #include <random>
 #include <set>
 #include <vector>
+#include <ctype.h>
 using namespace std;
  
 // http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0200r0.html
@@ -44,16 +45,23 @@ int main() {
 #endif
   string s;
   cin >> s;
-  vector<int> v;
-  for (int i = 0; i < s.size(); i++) {
-    if (s[i] > 0) {
-      v[i] = s[i];
+  int len = s.size();
+  int a[100];
+  int b = 0;
+  for (int i = 0; i < len; i += 2) {
+    if (isdigit(s[i])) {
+      a[b] = s[i];
+      b++;
     }
   }
-  sort(v.begin(), v.end());
-  cout << v[0];
-  for (int i = 1; i < v.size(); i++) {
-    cout << "+" << v[i];
+  int alen = sizeof(a) / sizeof(a[0]);
+  for (int i = 0; i < alen; i++) {
+    cout << a[i] << " ";
   }
+  sort(a, a + alen);
+  cout << a[0];
+  for (int i = 1; i < alen; i++) {
+    cout << "+" << a[i];
+  }  
   return 0;
 }
