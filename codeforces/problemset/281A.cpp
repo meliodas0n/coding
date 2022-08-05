@@ -46,10 +46,12 @@ int main() {
 #ifndef MELIODS_DEBUG
     cin.tie(nullptr);
 #endif
- 
-    int tests;
-    cin >> tests;
- 
-    while (tests-- > 0)
-        run_case();
+
+  string s;
+  cin >> s;
+  if (s[0] >= 97 and s[0] <= 122) {
+    s[0] = s[0] - 32;
+  }
+  cout << s;
+  return 0;
 }
