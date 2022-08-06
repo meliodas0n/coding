@@ -46,10 +46,16 @@ int main() {
 #ifndef MELIODS_DEBUG
     cin.tie(nullptr);
 #endif
- 
-    int tests;
-    cin >> tests;
- 
-    while (tests-- > 0)
-        run_case();
+  int n;
+  cin >> n;
+  string s;
+  cin >> s;
+  int count = 0;
+  for (int i = 0; i < s.size() - 1; i++) {
+    if (s[i] == s[i + 1]) {
+      count++;
+    }
+  }
+  cout << count;
+  return 0;
 }
