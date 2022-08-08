@@ -53,24 +53,11 @@ int main() {
   cin >> s;
   int i = 0, j = 1;
   for (int t = 0; t < T; t++) {
-    // while (i != s.size() or j != s.size()) {
-    //   if (s[i] == 'B' and s[j] == 'G') {
-    //     swap(s[i], s[j]);
-    //     i += 2;
-    //     j += 2;
-    //   }
-    // }
-    // for (int i = 1; i < s.size(); i++) {
-    //   if (s[j] == 'B' and s[i] == 'G' and j < s.size()) {
-    //     swap(s[j], s[i]);
-    //     j += 2;
-    //   }
-    // }
-    for (int i = 0; i < s.size() - 2; i += 2) {
+    for (int i = 0; i < n; i++) {
       if (s[i] == 'B' and s[i + 1] == 'G') {
         swap(s[i], s[i + 1]);
+        i++;
       }
-      cout << " I : " << i << "\n";
     }
   }
   cout << s;
