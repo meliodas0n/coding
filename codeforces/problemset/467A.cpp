@@ -46,21 +46,17 @@ int main() {
 #ifndef MELIODS_DEBUG
     cin.tie(nullptr);
 #endif
+  int n;
+  cin >> n;
 
-  int n, h;
-  cin >> n >> h;
-  int v[n];
+  int count = 0;
   for (int i = 0; i < n; i++) {
-    cin >> v[i];
-  }
-  int width = 0;
-  for (int i = 0; i < n; i++) {
-    if (v[i] <= h) {
-      width++;
-    } else {
-      width += 2;
+    int p, q;
+    cin >> p >> q;
+    if (q - p >= 2) {
+      count++;
     }
   }
-  cout << width;
+  cout << count;
   return 0;
 }
