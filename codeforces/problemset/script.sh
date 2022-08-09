@@ -6,3 +6,4 @@ git commit -m "$commit"
 git push
 
 cp -- "template.cpp" "$name.cpp"
+git add .
