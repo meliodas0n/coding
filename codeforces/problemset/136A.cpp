@@ -46,10 +46,18 @@ int main() {
 #ifndef MELIODS_DEBUG
     cin.tie(nullptr);
 #endif
- 
-    int tests;
-    cin >> tests;
- 
-    while (tests-- > 0)
-        run_case();
+
+  int n;
+  cin >> n;
+
+  int v[n];
+  for (int i = 1; i <= n; i++) {
+    int x;
+    cin >> x;
+    v[x] = i;
+  }
+  for (int i = 1; i <= n; i++) {
+    cout << v[i] << " ";
+  }
+  return 0;
 }
