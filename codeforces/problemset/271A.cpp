@@ -47,29 +47,44 @@ int main() {
     cin.tie(nullptr);
 #endif
     
-    int a, b, i, mas[5], pas;
-    cin >> a;
-    a++;
-    for (int k = 0; k < 9100; k++) {
-        b = a;
-        while (b > 0) {
-            mas[i] = b % 10;
-            i++;
-            b /= 10;
-        }
-        i = 0;
-        for (int i = 0; i < 3; i++) {
-            for (int j = i + 1; j < 4; j++) {
-                if (mas[i] == mas[j]) {
-                    pas++;
-                }
-            }
-        }
-        if (pas == 0) {
-            cout << a;
-            return 0;
-        }
-        pas = 0;
-        a++;
+    int a, b, c, d;
+    int n;
+    cin >> n;
+    while (true) {
+        n++;  
+        a = n % 10;
+		b = n % 100;
+		c = n % 1000;
+		d = n % 10000;
+		if (a != b and b != c and c != d and d != a and a != c and b != d) {
+			cout << n++;
+			break;
+		}
     }
+    // int a, b, i, mas[5], pas;
+    // cin >> a;
+    // a++;
+    // for (int k = 0; k < 9100; k++) {
+    //     b = a;
+    //     while (b > 0) {
+    //         mas[i] = b % 10;
+    //         i++;
+    //         b /= 10;
+    //     }
+    //     i = 0;
+    //     for (int i = 0; i < 3; i++) {
+    //         for (int j = i + 1; j < 4; j++) {
+    //             if (mas[i] == mas[j]) {
+    //                 pas++;
+    //             }
+    //         }
+    //     }
+    //     if (pas == 0) {
+    //         cout << a;
+    //         return 0;
+    //     }
+    //     pas = 0;
+    //     a++;
+    // }
+	return 0;
 }
