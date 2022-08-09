@@ -1,9 +1,8 @@
 #! /usr/bin/bash
 
-read -p "enter commit : " commit
+read -p "enter commit : " commit "new file : " name
 git add .
 git commit -m "$commit"
 git push
 
-read -p "enter new file : " name
 cp -- "template.cpp" "$name.cpp"
