@@ -47,14 +47,11 @@ int main() {
     cin.tie(nullptr);
 #endif
 
-  int n;
-  cin >> n;
-  int a[n], b[n];
-  for (int i = 0; i < n; i++) {
-    cin >> a[i] >> b[i];
-  }
-  int result;
-  
-  cout << result;
-  return 0;
+    int x;
+    cin >> x;
+    bool flag = true;
+    while (flag) {
+
+    }
+    return 0;
 }

@@ -46,15 +46,10 @@ int main() {
 #ifndef MELIODS_DEBUG
     cin.tie(nullptr);
 #endif
-
-  int n;
-  cin >> n;
-  int a[n], b[n];
-  for (int i = 0; i < n; i++) {
-    cin >> a[i] >> b[i];
-  }
-  int result;
-  
-  cout << result;
-  return 0;
+ 
+    int tests;
+    cin >> tests;
+ 
+    while (tests-- > 0)
+        run_case();
 }

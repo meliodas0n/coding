@@ -47,14 +47,14 @@ int main() {
     cin.tie(nullptr);
 #endif
 
-  int n;
-  cin >> n;
-  int a[n], b[n];
-  for (int i = 0; i < n; i++) {
-    cin >> a[i] >> b[i];
-  }
-  int result;
-  
-  cout << result;
-  return 0;
+    int n;
+    cin >> n;
+    int count = 0;
+    int a[5] = {100, 20, 10, 5, 1};
+    for (int i = 0; i < 5; i++) {
+        count += n / a[i];
+        n = n % a[i];
+    }
+    cout << count;
+    return 0;
 }

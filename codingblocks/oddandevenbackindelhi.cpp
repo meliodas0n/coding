@@ -38,7 +38,20 @@ template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr
 #endif
 
 void run_case() {
-    // write your shit code here.
+    int n;
+    cin >> n;
+    int sum = 0;
+    while (n) {
+        sum += n % 10;
+        n /= 10;
+    }
+    if (sum % 2 == 0 and sum % 4 == 0) {
+        cout << "Yes" << "\n";
+    } else if (sum % 2 == 1 and sum % 3 == 0) {
+        cout << "No" << "\n";
+    } else {
+        cout << "No" << "\n";
+    }
 }
 
 int main() {
@@ -46,15 +59,10 @@ int main() {
 #ifndef MELIODS_DEBUG
     cin.tie(nullptr);
 #endif
-
-  int n;
-  cin >> n;
-  int a[n], b[n];
-  for (int i = 0; i < n; i++) {
-    cin >> a[i] >> b[i];
-  }
-  int result;
-  
-  cout << result;
-  return 0;
+ 
+    int tests;
+    cin >> tests;
+ 
+    while (tests-- > 0)
+        run_case();
 }
